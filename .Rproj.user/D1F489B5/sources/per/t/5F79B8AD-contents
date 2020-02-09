@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## created by GenBats
+## as part of R Programming Course 2 Week 3 Assignment
+## copied the Example: Caching the Mean of a Vector, and tweaked to change mean to inverse
 
-## Write a short comment describing this function
+## This function creates a special "matrix" object that can cache its inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -18,7 +19,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function computes the inverse of the special "matrix" returned by makeCacheMatrix above.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
@@ -32,3 +33,8 @@ cacheSolve <- function(x, ...) {
   x$setinverse(m)
   m
 }
+
+## tesing done
+z<-matrix(c(5,6,7,8),2,2)
+zz<-makeCacheMatrix(z)
+cacheSolve(zz)
